@@ -1,0 +1,26 @@
+{
+    "name": "nicestudio/evolution",
+    "type": "library",
+    "authors": [
+		{
+			"name": "ProjectSoft",
+			"email": "projectsoft2009@yandex.ru"
+		}
+	],
+	"require": {
+		"php": ">=5.6.0",
+		"ext-ctype": "*",
+		"ps/image-optimizer": "^1.2",
+		"phpoffice/phpexcel": "*",
+		"mpdf/mpdf": "^7.0"
+	},
+	"require-dev": {},
+	"suggest": {},
+	"autoload": {
+		"psr-4": {
+			"NiceStudio\\": "classes/"
+		}
+	},
+	"autoload-dev": {},
+	"license": "LGPL-2.1"
+}
