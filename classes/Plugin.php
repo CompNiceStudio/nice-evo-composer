@@ -48,6 +48,17 @@ class Plugin {
 				<script type=\"text/javascript\" src=\"/{$js}\"></script>";
 				$modx->event->output($out);
 				break;
+			case 'OnDocFormSave':
+			case "OnDocDuplicate":
+				$paramsEv = $modx->event->params;
+				
+				$did = $paramsEv['new_id'] ? (int)$paramsEv['new_id'] : (int)$paramsEv['id'];
+				$hid = $paramsEv['new_id'] ? (int)$paramsEv['id'] : $did;
+				
+				$parent = $modx->getParent($hid, 0);
+				$parentId = $parent["id"];
+				\NiceStudio\Asset::createDocIdFolder($modx, $did, $parentId);
+				break;
 		}
 	}
 	
