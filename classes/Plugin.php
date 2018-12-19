@@ -57,6 +57,7 @@ class Plugin {
 				
 				$parent = $modx->getParent($hid, 0);
 				$parentId = $parent["id"];
+				
 				\NiceStudio\Asset::createDocIdFolder($modx, $did, $parentId);
 				break;
 		}
